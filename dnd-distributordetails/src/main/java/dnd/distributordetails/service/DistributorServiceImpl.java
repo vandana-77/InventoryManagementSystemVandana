@@ -16,8 +16,6 @@ public class DistributorServiceImpl implements DistributorService{
 
 	@Autowired()
 	DistributorRepo repo;
-    //@Autowired
-    //RestTemplate restTemplate;
     
 	public DistributorEntity addDistributorDetails(DistributorEntity details) {
     	if(repo.existsById(details.getDistributorId())) {
@@ -45,11 +43,7 @@ public class DistributorServiceImpl implements DistributorService{
 
 	@Override
 	public DistributorEntity updateDistributor(DistributorEntity distributor) {
-		/*
-		 * DistributorEntity d = repo.getOne(distributor.getDistributorId());
-		 * d.setName(distributor.getName()); d.setAddress(distributor.getAddress());
-		 * d.setPhoneNo(distributor.getPhoneNo()); return d;
-		 */
+		
                 return repo.save(distributor);
 	}
 }
