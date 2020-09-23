@@ -17,8 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import dnd.distributordetails.exception.DistributorIdNotFoundException;
 
-//import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-
 import dnd.distributordetails.model.DistributorEntity;
 import dnd.distributordetails.service.DistributorServiceImpl;
 
@@ -60,10 +58,6 @@ public class DistributorController {
 }
 	
 @PutMapping("/updateDistributorId")
-/*
- * public DistributorEntity updateDistributor(@RequestBody DistributorEntity
- * distributor) { return service.updateDistributor(distributor); }
- */
 
 
   public ResponseEntity<String> updateDistributorId(@RequestBody DistributorEntity distributor)
@@ -81,13 +75,3 @@ public class DistributorController {
   
  
 
-/*
- * * @GetMapping("/RMdetails/{distributorId}") public DistributorEntity
- * fetchRawMaterialDetails(Integer distributorId,String delivereyStatus) {
- * return null;
- * 
- * }
- * 
- * public DistributorEntity distributorFallback(@PathVariable int distributorId)
- * { return new DistributorEntity(101,"praveena","hyd", (long) 912344430); }
- */
